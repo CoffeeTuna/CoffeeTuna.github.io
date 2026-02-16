@@ -1,0 +1,244 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+body {
+    background-color: #f9f7f4;  /* 暖白 */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== 页面切换 ===== */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+/* ===== 按钮 - 干净 ===== */
+.btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.primary-btn {
+    background-color: #c87f42;  /* 沙县招牌色 */
+    color: #fff;
+}
+.primary-btn:hover {
+    background-color: #b06c30;
+}
+.default-btn {
+    background-color: #e6e6e6;
+    color: #555;
+}
+.default-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== 欢迎页 · 简单卡片 ===== */
+.welcome-content {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 32px 24px 36px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+.welcome-content h1 {
+    font-size: 26px;
+    color: #b06c30;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.welcome-content h1 i {
+    color: #c87f42;
+    margin-right: 6px;
+}
+.welcome-content h1::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background: #c87f42;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    opacity: 0.5;
+}
+.sub-title {
+    font-size: 16px;
+    color: #8a8a8a;
+    background-color: #f0ece8;
+    display: inline-block;
+    padding: 6px 22px;
+    border-radius: 40px;
+    margin-bottom: 24px;
+}
+
+.desc {
+    background-color: #fffaf5;
+    padding: 22px 20px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    border: 1px solid #e6c9ae;        
+    box-shadow: 0 6px 12px rgba(160, 100, 60, 0.06); 
+    color: #555;
+}
+.desc p {
+    margin-bottom: 8px;
+}
+.desc strong {
+    color: #b45f2a;
+    background-color: #ffecdf;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.welcome-img {
+    margin-top: 32px;
+    background-color: #f0e4d6;  /* 图片未加载时的占位色 */
+    border-radius: 14px;
+    overflow: hidden;
+}
+.welcome-img img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+}
+
+/* ===== 测试页 ===== */
+.test-header {
+    margin-bottom: 20px;
+}
+.question-count {
+    color: #777;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 12px;
+}
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: #c87f42;
+    width: 0%;
+    transition: width 0.3s;
+}
+.question-content {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 20px;
+    margin: 16px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.option-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid #e2dcd7;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.option-item:hover {
+    border-color: #c87f42;
+    background: #fffaf5;
+}
+.option-item input {
+    margin-right: 14px;
+    accent-color: #c87f42;
+}
+
+/* 结果页 */
+.result-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px 24px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    text-align: center;
+}
+.result-card h2 {
+    border-top: 2px dashed #e6c9ae;
+    padding: 12px 0;
+    line-height: 1.4;
+    color: #7a4d2e;
+    font-weight: 600;
+}
+.result-card h2::before,
+.result-card h2::after {
+    content: "🥢";
+    font-size: 24px;
+    color: #c87f42;
+    opacity: 0.7;
+    letter-spacing: -2px;
+}
+.food-name {
+    font-size: 30px;
+    color: #c87f42;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.food-img img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.food-intro, .shop-recommend {
+    text-align: left;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.food-intro:last-child { border-bottom: none; }
+.food-intro h4, .shop-recommend h4 {
+    color: #b06c30;
+    font-size: 17px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.food-intro p {
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+    line-height: 1.7;
+}
+.shop-recommend ul { list-style: none; }
+.shop-recommend li {
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+.shop-recommend li strong { color: #333; }

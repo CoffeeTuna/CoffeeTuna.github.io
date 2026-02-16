@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>测测什么沙县小吃与你相配</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 欢迎页 -->
+        <section class="page welcome-page active" id="welcomePage">
+            <div class="welcome-content">
+                <h1><i class="fas fa-utensils"></i> 沙县小吃匹配测试</h1>
+                <p class="sub-title">📍 寻找你的灵魂美食 CP</p>
+                <div class="desc">
+                    <p>“你吃什么，就像什么。”</p>
+                    <p>升级版 <strong>10道</strong> 深度心理测试题<br>
+                    从生活习惯到潜意识选择<br>
+                    精准锁定你的专属沙县味道</p>
+                </div>
+                <button class="btn primary-btn" id="startTestBtn">开始匹配 <i class="fas fa-arrow-right"></i></button>
+                <div class="welcome-img">
+                    <img src="pic/logo.jpg" alt="沙县小吃">
+                </div>
+            </div>
+        </section>
+
+        <!-- 测试页 -->
+        <section class="page test-page" id="testPage">
+            <div class="test-header">
+                <span class="question-count" id="questionCount">第1题 / 共10题</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <div class="question-content" id="questionContent">
+                <!-- JS动态渲染 -->
+            </div>
+            <div class="test-btns">
+                <button class="btn default-btn" id="prevBtn" disabled>上一题</button>
+                <button class="btn primary-btn" id="nextBtn">下一题</button>
+                <button class="btn primary-btn" id="submitBtn" style="display: none;">生成结果</button>
+            </div>
+        </section>
+
+        <!-- 结果页 -->
+        <section class="page result-page" id="resultPage">
+            <div class="result-card">
+                <h2>你的专属沙县小吃是</h2>
+                <div class="food-name" id="foodName"></div>
+                <div class="food-img"></div>
+                <div class="food-intro" id="foodIntro"></div>
+                <div class="shop-recommend" id="shopRecommend"></div>
+            </div>
+            <button class="btn primary-btn re-test-btn" id="reTestBtn">重新测试 <i class="fas fa-redo"></i></button>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
